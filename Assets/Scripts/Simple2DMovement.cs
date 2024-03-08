@@ -5,6 +5,11 @@ public class Simple2dmovement : MonoBehaviour
 {
     public float moveSpeed=5f;
     private Rigidbody2D rb;
+
+
+    public bool inWindZone= false;
+    public GameObject windZone;
+
     // private SpriteRenderer ab;
     // public Sprite sprite;
 
@@ -30,5 +35,30 @@ public class Simple2dmovement : MonoBehaviour
         }
         Vector2 movement =new Vector2(horizontalInput,verticaInput).normalized*moveSpeed;
         rb.velocity=movement;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "windArea")
+        {
+            windZone = collision.gameObject;
+            inWindZone = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "windArea")
+        {
+            inWindZone = false;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(inWindZone)
+        {
+            rb.AddForce(windZone.GetComponent<WindArea>().direction * windZone.GetComponent<WindArea>().strength);
+        }
     }
 }
