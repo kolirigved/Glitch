@@ -14,9 +14,9 @@ public class PauseMenu : MonoBehaviour
         {
             if (!Panel.activeSelf)
             {
-            pm.enabled = false;
-            Time.timeScale = 0;
-            Panel.SetActive(true);
+                pm.enabled = false;
+                Time.timeScale = 0;
+                Panel.SetActive(true);
             }
             else
             {
@@ -34,8 +34,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Mechanics");
         Time.timeScale = 1;
+        // Panel.SetActive(false);
     }
 
     public void MainMenu()
