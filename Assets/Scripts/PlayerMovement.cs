@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         {
             sp.flipX=true;
         }
-        transform.position = new Vector2(transform.position.x+MovementSpeed * input*Time.deltaTime*(1/Time.timeScale), transform.position.y);
+        transform.position = new Vector2(transform.position.x + MovementSpeed * input * Time.deltaTime * (1 / Time.timeScale), transform.position.y);
         if(grounded && Input.GetAxis("Jump")!=0)
         {
             rb.velocity = new Vector2(rb.velocity.x, Jumpspeed);

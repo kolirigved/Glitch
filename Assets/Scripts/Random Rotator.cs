@@ -10,7 +10,7 @@ public class RandomRotator : MonoBehaviour
     [SerializeField] float changeTime = 2f;
     [SerializeField] float minChangeInterval = 5f;
     [SerializeField] float maxChangeInterval = 15f;
-    public int mode = 0;
+    int mode = 0;
     float changeTimer;
     Quaternion OldRotation = Quaternion.identity;
     void Start()
@@ -42,7 +42,7 @@ public class RandomRotator : MonoBehaviour
         float RotateSpeed = (Target(mode).eulerAngles.z - OldRotation.eulerAngles.z)/changeTime;
         Rotation.eulerAngles = new Vector3(0, 0, OldRotation.eulerAngles.z + RotateSpeed*changeTimer);
         transform.rotation = Rotation;
-        Debug.Log(RotateSpeed);
+        //Debug.Log(RotateSpeed);
         }
         
     }

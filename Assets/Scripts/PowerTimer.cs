@@ -7,7 +7,7 @@ public class PowerTimer : MonoBehaviour
 {
     public float RefillTime = 40f;
     public Image timer;
-    float effectTime = 3f;
+    public float effectTime = 3f;
     float effectTimer = 0f;
 
     private void Start()
@@ -18,7 +18,7 @@ public class PowerTimer : MonoBehaviour
     private void Update()
     {
         effectTimer-= Time.deltaTime/Time.timeScale;
-        if(effectTimer < 0)
+        if(effectTimer < 0 && Time.timeScale!=0)
         {
             Time.timeScale = 1;
         }
