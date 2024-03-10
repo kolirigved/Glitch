@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        
         {
             grounded = true;
             transform.rotation = Quaternion.identity;
@@ -50,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
         {
             grounded = false;
         }
