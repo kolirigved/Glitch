@@ -7,9 +7,9 @@ public class RandomRotator : MonoBehaviour
 {
     //[SerializeField] float changeInterval = 10f;
     [SerializeField] float Timer;
-    [SerializeField] float changeTime = 2f;
-    [SerializeField] float minChangeInterval = 5f;
-    [SerializeField] float maxChangeInterval = 15f;
+    [SerializeField] float changeTime = 6f;
+    [SerializeField] float minChangeInterval = 3f;
+    [SerializeField] float maxChangeInterval = 10f;
     int mode = 0;
     float changeTimer;
     Quaternion OldRotation = Quaternion.identity;
