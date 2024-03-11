@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sp;
     public PowerTimer powerRefill;
     [SerializeField] float TimeFactor = 0.2f;
+    [SerializeField] public AudioSource Jumpsound;
 
     private void Start()
     {
@@ -31,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector2(transform.position.x + MovementSpeed * input * Time.deltaTime * (1 / Time.timeScale), transform.position.y);
         if(grounded && Input.GetKeyDown(KeyCode.Space))
         {
+            Jumpsound.Play();
+
             rb.velocity = new Vector2(rb.velocity.x, Jumpspeed);
         }
 
