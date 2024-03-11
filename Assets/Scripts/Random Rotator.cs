@@ -7,7 +7,7 @@ public class RandomRotator : MonoBehaviour
 {
     //[SerializeField] float changeInterval = 10f;
     [SerializeField] float Timer;
-    [SerializeField] float changeTime = 6f;
+    [SerializeField] float changeTime = 1f;
     [SerializeField] float minChangeInterval = 3f;
     [SerializeField] float maxChangeInterval = 10f;
     int mode = 0;
