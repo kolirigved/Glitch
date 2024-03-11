@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer sp;
     public PowerTimer powerRefill;
     [SerializeField] float TimeFactor = 0.2f;
+    [SerializeField] public AudioSource jumpsound;
 
     private void Start()
     {
@@ -24,17 +25,18 @@ public class PlayerMovement : MonoBehaviour
         {
             sp.flipX = false;
         }
-        else if(input < 0)
+        else if (input < 0)
         {
-            sp.flipX=true;
+            sp.flipX = true;
         }
         transform.position = new Vector2(transform.position.x + MovementSpeed * input * Time.deltaTime * (1 / Time.timeScale), transform.position.y);
-        if(grounded && Input.GetAxis("Jump")!=0)
+        if (grounded && Input.GetAxis("Jump") != 0)
         {
+            jumpsound.Play();
             rb.velocity = new Vector2(rb.velocity.x, Jumpspeed);
         }
 
-        if(powerRefill.timer.fillAmount == 1 && Input.GetKeyDown(KeyCode.LeftShift))
+        if (powerRefill.timer.fillAmount == 1 && Input.GetKeyDown(KeyCode.LeftShift))
         {
             powerRefill.PowerUp(TimeFactor);
         }
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         {
             grounded = true;
             transform.rotation = Quaternion.identity;

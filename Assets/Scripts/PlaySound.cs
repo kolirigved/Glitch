@@ -17,7 +17,7 @@ public class PlaySound : MonoBehaviour
         
     }
 
-    public void sounfplayeffect()
+    public void soundplayeffect()
     {
         soundeffect.Play();
     }
