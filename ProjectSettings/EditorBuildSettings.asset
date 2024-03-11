@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Mechanics.unity
     guid: e8420e2638207a74a85bf9c59c726ba1
   - enabled: 1
-    path: Assets/Scenes/Lost.unity
+    path: Assets/Scenes/LostScreen.unity
     guid: 223546e98d3ac6644a9eac050b6b5dbc
   - enabled: 1
     path: Assets/Scenes/Win.unity

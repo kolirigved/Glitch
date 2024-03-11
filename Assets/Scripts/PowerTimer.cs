@@ -28,6 +28,7 @@ public class PowerTimer : MonoBehaviour
     public void PowerUp(float TimeFactor)
     {
         Time.timeScale = TimeFactor;
+        Time.fixedDeltaTime = Time.timeScale * 0.02f;
         timer.fillAmount = 0;
         effectTimer = effectTime;
     }
