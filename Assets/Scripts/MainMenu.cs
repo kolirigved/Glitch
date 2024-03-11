@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject instructionpannel;
     public GameObject Mainmenu;
+    public AudioSource click;
     void start()
     {
         instructionpannel.SetActive(false);
@@ -14,26 +15,31 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+        click.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
     {
+        click.Play();
         Application.Quit();
     }
 
     public void SettingsMenu()
     {
+        click.Play();
         SceneManager.LoadScene("SettingsMenu");
     }
-       public void ShowInstructions()
+    public void ShowInstructions()
     {
         // Show the instructions panel
+        click.Play();
         instructionpannel.SetActive(true);
         Mainmenu.SetActive(false);
     }
     public void back()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex );
+        click.Play();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
