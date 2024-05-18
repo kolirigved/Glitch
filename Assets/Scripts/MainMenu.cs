@@ -40,6 +40,7 @@ public class MainMenu : MonoBehaviour
     public void back()
     {
         click.Play();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        instructionpannel.SetActive(false);
+        Mainmenu.SetActive(true);
     }
 }
