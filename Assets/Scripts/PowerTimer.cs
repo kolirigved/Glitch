@@ -21,6 +21,7 @@ public class PowerTimer : MonoBehaviour
         if(effectTimer < 0 && Time.timeScale!=0)
         {
             Time.timeScale = 1;
+            Time.fixedDeltaTime = 0.02f;
         }
         timer.fillAmount += (1 / RefillTime)*Time.deltaTime/Time.timeScale;
     }

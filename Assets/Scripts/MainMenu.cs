@@ -16,15 +16,23 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         click.Play();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Invoke("Play", 0.3f);
     }
 
+    void Play()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     public void QuitGame()
     {
         click.Play();
-        Application.Quit();
+        Invoke("Quit", 0.3f);
     }
 
+    private void Quit()
+    {
+        Application.Quit();
+    }
     public void SettingsMenu()
     {
         click.Play();
