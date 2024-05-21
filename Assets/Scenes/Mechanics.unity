@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 86320807}
   - component: {fileID: 86320809}
   - component: {fileID: 86320808}
+  - component: {fileID: 86320810}
   m_Layer: 7
   m_Name: Square (3)
   m_TagString: Ground
@@ -522,6 +523,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &86320810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86320806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5533934eb4559484c93ea3aee1164080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 0
 --- !u!1 &96185213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3248,6 +3262,7 @@ GameObject:
   - component: {fileID: 1026534647}
   - component: {fileID: 1026534649}
   - component: {fileID: 1026534648}
+  - component: {fileID: 1026534650}
   m_Layer: 7
   m_Name: Square (2)
   m_TagString: Ground
@@ -3367,6 +3382,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1026534650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026534646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5533934eb4559484c93ea3aee1164080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 180
 --- !u!1 &1104078378
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,7 +3669,7 @@ GameObject:
   - component: {fileID: 1254763216}
   m_Layer: 7
   m_Name: Wall
-  m_TagString: Ground
+  m_TagString: Rotator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3697,6 +3725,7 @@ GameObject:
   - component: {fileID: 1316134590}
   - component: {fileID: 1316134592}
   - component: {fileID: 1316134591}
+  - component: {fileID: 1316134593}
   m_Layer: 7
   m_Name: Square
   m_TagString: Ground
@@ -3816,6 +3845,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1316134593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316134589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5533934eb4559484c93ea3aee1164080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 90
 --- !u!1 &1476636528
 GameObject:
   m_ObjectHideFlags: 0
@@ -4178,6 +4220,7 @@ GameObject:
   - component: {fileID: 1595447112}
   - component: {fileID: 1595447114}
   - component: {fileID: 1595447113}
+  - component: {fileID: 1595447115}
   m_Layer: 7
   m_Name: Square (1)
   m_TagString: Ground
@@ -4297,6 +4340,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1595447115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595447111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5533934eb4559484c93ea3aee1164080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: 270
 --- !u!1 &1781710972
 GameObject:
   m_ObjectHideFlags: 0
