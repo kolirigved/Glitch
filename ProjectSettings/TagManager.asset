@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Ground
   - windArea
+  - BorderWalls
+  - Spikes
+  - Platform
+  - breakablePlatform
   layers:
   - Default
   - TransparentFX
