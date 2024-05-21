@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public PowerTimer powerRefill;
     [SerializeField] float TimeFactor = 0.2f;
     [SerializeField] public AudioSource jumpsound;
+    float JumpCount = 0;
 
     private void Start()
     {
@@ -30,10 +31,11 @@ public class PlayerMovement : MonoBehaviour
             sp.flipX = true;
         }
         transform.position = new Vector2(transform.position.x + MovementSpeed * input * Time.deltaTime * (1 / Time.timeScale), transform.position.y);
-        if (grounded && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && JumpCount<2)
         {
             jumpsound.Play();
             rb.velocity = new Vector2(rb.velocity.x, Jumpspeed);
+            JumpCount++;
         }
 
         if (powerRefill.timer.fillAmount == 1 && Input.GetKeyDown(KeyCode.LeftShift))
@@ -46,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         {
+            JumpCount = 0;
             grounded = true;
             transform.rotation = Quaternion.identity;
         }
