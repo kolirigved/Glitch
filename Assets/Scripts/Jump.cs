@@ -10,12 +10,12 @@ public class Jump : MonoBehaviour
     public float jumpTime;
     public float jumpMultiplier;
     public float JumpForce = 5f;
-    //public Animator animator;
+    // public Animator animator;
     Vector2 vecGravity;
     bool isJumping;
     float jumpCounter;
-    //[SerializeField] private AudioSource jumpSoundEffect;
-
+    [SerializeField] private AudioSource jumpSoundEffect;
+    float jumpCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +28,14 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.Space)&& OnGround)
+       if (Input.GetKeyDown(KeyCode.Space) && OnGround)
        {
             //animator.SetBool("IsJumping",true);
             //rb.velocity=new Vector2(rb.velocity.x,jumpSpeed);
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
             isJumping = true;
             jumpCounter = 0;
+            jumpCount++;
             //rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             
         }
@@ -57,7 +58,7 @@ public class Jump : MonoBehaviour
         }
         if(Input.GetKeyUp(KeyCode.Space)) 
         { 
-            //jumpSoundEffect.Play();
+            jumpSoundEffect.Play();
             isJumping=false;
             jumpCounter=0;
             if (rb.velocity.y > 0)
@@ -72,10 +73,11 @@ public class Jump : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Ground"))
         {
             //animator.SetBool("IsJumping", false);
             OnGround = true;
+            jumpCount = 0;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

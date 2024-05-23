@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public PowerTimer powerRefill;
     [SerializeField] float TimeFactor = 0.2f;
     [SerializeField] public AudioSource jumpsound;
+    [SerializeField] public Animator animator;
     float JumpCount = 0;
 
     private void Start()
@@ -24,18 +25,20 @@ public class PlayerMovement : MonoBehaviour
         float input = Input.GetAxis("Horizontal");
         if (input > 0)
         {
-            sp.flipX = false;
+            sp.flipX = true;
         }
         else if (input < 0)
         {
-            sp.flipX = true;
+            sp.flipX = false;
         }
         transform.position = new Vector2(transform.position.x + MovementSpeed * input * Time.deltaTime * (1 / Time.timeScale), transform.position.y);
+        animator.SetFloat("speed", Mathf.Abs(input));
         if (Input.GetKeyDown(KeyCode.Space) && JumpCount<2)
         {
             jumpsound.Play();
             rb.velocity = new Vector2(rb.velocity.x, Jumpspeed);
             JumpCount++;
+            animator.SetBool("isJumping", true);
         }
 
         if (powerRefill.timer.fillAmount == 1 && Input.GetKeyDown(KeyCode.LeftShift))
@@ -51,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
             JumpCount = 0;
             grounded = true;
             transform.rotation = Quaternion.identity;
+            animator.SetBool("isJumping", false);
+
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
