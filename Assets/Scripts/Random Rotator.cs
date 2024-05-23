@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class RandomRotator : MonoBehaviour
@@ -36,7 +35,7 @@ public class RandomRotator : MonoBehaviour
             mode = newmode;
             Timer = Random.Range(minChangeInterval, maxChangeInterval);
             OldRotation = transform.rotation;
-            changeTime = Mathf.Abs(Target(mode).eulerAngles.z - OldRotation.eulerAngles.z) / RotateSpeed;
+            changeTime = (Target(mode).eulerAngles.z - OldRotation.eulerAngles.z)/ RotateSpeed;
             changeTimer = 0;
         }
         if (changeTimer < changeTime)
