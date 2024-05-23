@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public PowerTimer powerRefill;
     [SerializeField] float TimeFactor = 0.2f;
     [SerializeField] public AudioSource jumpsound;
+    [SerializeField] Animator animator;
     float JumpCount = 0;
 
     private void Start()
@@ -24,17 +26,21 @@ public class PlayerMovement : MonoBehaviour
         float input = Input.GetAxis("Horizontal");
         if (input > 0)
         {
-            sp.flipX = false;
+            sp.flipX = true;
+          
         }
         else if (input < 0)
         {
-            sp.flipX = true;
+            sp.flipX = false;
+            
         }
         transform.position = new Vector2(transform.position.x + MovementSpeed * input * Time.deltaTime * (1 / Time.timeScale), transform.position.y);
-        if (Input.GetKeyDown(KeyCode.Space) && JumpCount<2)
+        animator.SetFloat("speed", MovementSpeed * math.abs(input));
+        if (Input.GetKeyDown(KeyCode.Space) && JumpCount < 2)
         {
             jumpsound.Play();
             rb.velocity = new Vector2(rb.velocity.x, Jumpspeed);
+            animator.SetBool("isJumping", true);
             JumpCount++;
         }
 
@@ -50,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         {
             JumpCount = 0;
             grounded = true;
+            animator.SetBool("isJumping", false);
             transform.rotation = Quaternion.identity;
         }
     }
