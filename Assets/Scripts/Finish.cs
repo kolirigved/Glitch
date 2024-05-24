@@ -9,7 +9,7 @@ public class Finish: MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Finish");
+            SceneManager.LoadScene("LostScreen");
         }
     }
 }
