@@ -316,26 +316,25 @@ MonoBehaviour:
   m_text: 'Move the player with ''A'' or ''D'' keys.
 
     Use ''Space'' to jump,You
-    can jump in mid-air once as well.
+    have double-jump.
 
-    Use ''Left shift'' to use the slow motion
-    superpower.
+    Use ''Left shift'' to use the slow motion superpower.
 
-    Use ''Escape'' to pause the game.
+    Use
+    ''Escape'' to pause the game.
 
-    (Caution: Superpower
-    has a refill time of 40 sec)
+    (Caution: Superpower has a refill time of
+    40 sec)
 
-    Chaos in the game is that the screen will rotate
-    randomly.
+    Chaos in the game is that the screen will rotate randomly.
 
-    There will be two types of obstacles:
+    There
+    will be two types of obstacles:
 
-    1)Spiky balls which
-    will decrease some amount of health.
+    1)Spiky balls which will decrease some amount
+    of health.
 
-    2)Alien spikes which will lead to direct
-    death.'
+    2)Alien spikes which will lead to direct death.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
