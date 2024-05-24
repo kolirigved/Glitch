@@ -27,7 +27,7 @@ public class Healthbar : MonoBehaviour
         {
             bar.color = Color.red;
         }
-        if(bar.fillAmount <= 0)
+        if(bar.fillAmount <= 0.01)
         {
             SceneManager.LoadScene("LostScreen");
         }

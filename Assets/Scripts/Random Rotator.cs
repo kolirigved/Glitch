@@ -17,7 +17,7 @@ public class RandomRotator : MonoBehaviour
     Quaternion OldRotation = Quaternion.identity;
     void Start()
     {
-        Timer = Random.Range(minChangeInterval, maxChangeInterval);
+        Timer = Random.Range(5,10);
         changeTimer = changeTime;
     }
 
