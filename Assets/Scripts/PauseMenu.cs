@@ -16,6 +16,7 @@ public class PauseMenu : MonoBehaviour
             {
                 pm.enabled = false;
                 Time.timeScale = 0;
+                Cursor.visible = true;
                 Panel.SetActive(true);
             }
             else
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         pm.enabled = true;
         Panel.SetActive(false);
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
 
     public void Restart()

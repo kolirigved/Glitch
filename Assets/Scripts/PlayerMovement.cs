@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
     }
