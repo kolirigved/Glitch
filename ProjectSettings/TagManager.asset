@@ -12,6 +12,7 @@ TagManager:
   - breakablePlatform
   - wall
   - Rotator
+  - MiniMap
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - UI
   - Background
   - Foreground
-  - 
-  - 
+  - MiniMap
+  - Player
   - 
   - 
   - 
@@ -54,4 +55,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1901644239
+    locked: 0
+  - name: MiniMap
+    uniqueID: 4081744681
     locked: 0
