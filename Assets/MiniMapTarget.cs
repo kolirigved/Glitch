@@ -39,7 +39,7 @@ public class MiniMapTarget : MonoBehaviour
             0f
         );
 
-        float borderSize = 10f;
+        float borderSize = 5f;
         float halfMinimapWidth = miniMapRectTransform.rect.width / 2f;
         float halfMinimapHeight = miniMapRectTransform.rect.height / 2f;
 
