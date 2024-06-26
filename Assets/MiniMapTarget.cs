@@ -10,6 +10,7 @@ public class MiniMapTarget : MonoBehaviour
     public RectTransform miniMapRectTransform;
     public Camera miniMapCamera;
     public Vector3 targetPosition;
+    public float offset = 0.5f;
 
     public static float GetAngleFromVectorFloat(Vector3 dir) {
         dir = dir.normalized;
@@ -38,14 +39,27 @@ public class MiniMapTarget : MonoBehaviour
             (targetPositionViewportPoint.y - 0.5f) * miniMapRectTransform.rect.height,
             0f
         );
+        bool isInView = targetPositionViewportPoint.x >= 0 && targetPositionViewportPoint.x <= 1 && targetPositionViewportPoint.y >= 0 && targetPositionViewportPoint.y <= 1;
 
-        float borderSize = 5f;
-        float halfMinimapWidth = miniMapRectTransform.rect.width / 2f;
-        float halfMinimapHeight = miniMapRectTransform.rect.height / 2f;
+        // Change the icon based on whether the target is in view
+        
 
-        targetPositionLocalPoint.x = Mathf.Clamp(targetPositionLocalPoint.x, -halfMinimapWidth + borderSize, halfMinimapWidth - borderSize);
-        targetPositionLocalPoint.y = Mathf.Clamp(targetPositionLocalPoint.y, -halfMinimapHeight + borderSize, halfMinimapHeight - borderSize);
+        // Constrain the pointer within a circular minimap
+        float radius = miniMapRectTransform.rect.width / 2f; // Assuming the minimap is a perfect circle
+        if (targetPositionLocalPoint.magnitude > radius) {
+            targetPositionLocalPoint = targetPositionLocalPoint.normalized * (radius+offset);
+        }
 
+        // Update pointer position
         pointerRectTransform.localPosition = targetPositionLocalPoint;
+
+        // float borderSize = 5f;
+        // float halfMinimapWidth = miniMapRectTransform.rect.width / 2f;
+        // float halfMinimapHeight = miniMapRectTransform.rect.height / 2f;
+
+        // targetPositionLocalPoint.x = Mathf.Clamp(targetPositionLocalPoint.x, -halfMinimapWidth + borderSize, halfMinimapWidth - borderSize);
+        // targetPositionLocalPoint.y = Mathf.Clamp(targetPositionLocalPoint.y, -halfMinimapHeight + borderSize, halfMinimapHeight - borderSize);
+
+        // pointerRectTransform.localPosition = targetPositionLocalPoint;
     }
 }
