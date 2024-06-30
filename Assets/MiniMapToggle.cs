@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class MiniMapToggle : MonoBehaviour
 {
     public GameObject RawImage; // Assign the minimap GameObject in the Inspector
     private bool isMinimized = false;
@@ -10,6 +10,6 @@ public class NewBehaviourScript : MonoBehaviour
     public void ToggleMinimap()
     {
         isMinimized = !isMinimized;
-        RawImage.SetActive(!isMinimized);
+        RawImage.SetActive(isMinimized);
     }
 }
