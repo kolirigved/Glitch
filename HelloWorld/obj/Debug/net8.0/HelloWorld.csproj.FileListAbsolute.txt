@@ -1,0 +1,15 @@
+D:\GAmedev\Glitch\HelloWorld\bin\Debug\net8.0\HelloWorld.exe
+D:\GAmedev\Glitch\HelloWorld\bin\Debug\net8.0\HelloWorld.deps.json
+D:\GAmedev\Glitch\HelloWorld\bin\Debug\net8.0\HelloWorld.runtimeconfig.json
+D:\GAmedev\Glitch\HelloWorld\bin\Debug\net8.0\HelloWorld.dll
+D:\GAmedev\Glitch\HelloWorld\bin\Debug\net8.0\HelloWorld.pdb
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\HelloWorld.AssemblyInfoInputs.cache
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\HelloWorld.AssemblyInfo.cs
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\HelloWorld.csproj.CoreCompileInputs.cache
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\HelloWorld.sourcelink.json
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\HelloWorld.dll
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\refint\HelloWorld.dll
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\HelloWorld.pdb
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\HelloWorld.genruntimeconfig.cache
+D:\GAmedev\Glitch\HelloWorld\obj\Debug\net8.0\ref\HelloWorld.dll
