@@ -18,6 +18,6 @@ public class MiniMapToggle : MonoBehaviour
     public void ToggleMinimap()
     {
         isMinimized = !isMinimized;
-        RawImage.SetActive(isMinimized);
+        RawImage.SetActive(!isMinimized);
     }
 }
